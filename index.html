@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velu Builders</title>
+
+        <!-- Favicon -->
+    <link href="assets/images/mini-logo.png" rel="icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+
+     <!-- Navbar -->
+    <nav class="navbar">
+            <div class="container nav-flex">
+                <div class="logo">
+                    <img src="assets/images/logo-1.png" alt="VB Logo">
+                </div>
+
+                <div class="hamburger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#footer" class="btn-gold">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    <header id="home" class="hero-slider">
+        <div class="slide slide-1 active">
+            <div class="slide-content">
+                <h1>Your Trusted<br><em>Builder</em></h1>
+            </div>
+        </div>
+        <div class="slide slide-2">
+            <div class="slide-content">
+                <h1>Architectural <br><em>Excellence</em></h1>
+            </div>
+        </div>
+        <div class="slide slide-3">
+            <div class="slide-content">
+                <h1>Built For <br><em>Generations</em></h1>
+            </div>
+        </div>
+        
+        <div class="slider-controls">
+            <button onclick="prevSlide()">&#10094;</button>
+            <button onclick="nextSlide()">&#10095;</button>
+        </div>
+    </header>
+
+
+     <!-- About Us -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="about-layout">
+                <div class="about-text">
+                    <h4 class="sub-heading">Who We Are</h4>
+                    <h2 class="section-heading">Crafting Excellence<br>Since 2000</h2>
+                    <p>We do not just build structures; we craft landmarks. With a focus on premium aesthetics and fortified security, VB stands at the intersection of elegance and strength.</p>
+                    <p>Our philosophy is rooted in the belief that a home should be a fortress of peace and a monument of style.</p>
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop" class="signature-img" alt="Signature Architecture">
+                </div>
+                <div class="about-visual">
+                    <div class="gold-frame"></div>
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2053&auto=format&fit=crop" alt="Luxury Interior">
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <section id="services" class="section-padding bg-light">
+        <div class="container">
+            <div class="center-header">
+                <h4 class="sub-heading">Our </h4>
+                <h2 class="section-heading">Services</h2>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-box">
+                    <span class="service-num">01</span>
+                    <h3>Approval Drawings</h3>
+                    <p>Professional blueprint creation and documentation support for fast regulatory building plan approvals.</p>
+                </div>
+                
+                <div class="service-box">
+                    <span class="service-num">02</span>
+                    <h3>Building Constructions</h3>
+                    <p>High-quality residential and commercial construction using premium materials and expert craftsmanship.</p>
+                </div>
+                
+                <div class="service-box">
+                    <span class="service-num">03</span>
+                    <h3>Architecture Plan & 3D Elevation</h3>
+                    <p>Custom 2D floor plans and stunning photorealistic 3D front elevation designs to visualize your dream home.</p>
+                </div>
+
+                <div class="service-box">
+                    <span class="service-num">04</span>
+                    <h3>Turnkey Projects</h3>
+                    <p>Complete project management from initial design to final key handover, ensuring a stress-free experience.</p>
+                </div>
+
+                <div class="service-box">
+                    <span class="service-num">05</span>
+                    <h3>Consultancy Work</h3>
+                    <p>Expert structural and civil engineering consultancy to optimize stability, cost, and efficiency.</p>
+                </div>
+
+                <div class="service-box">
+                    <span class="service-num">06</span>
+                    <h3>Real Estate</h3>
+                    <p>Trusted guidance for property buying, selling, and land development opportunities in prime locations.</p>
+                </div>
+
+                <div class="service-box">
+                    <span class="service-num">07</span>
+                    <h3>Estimation for Banks</h3>
+                    <p>Detailed construction cost estimation reports prepared specifically for bank loan approvals and financial planning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Pricing Section -->
+     <section id="pricing" class="section-padding pricing-section">
+        <div class="container">
+            <div class="center-header text-center">
+                <h4 class="sub-heading">Transparent Pricing</h4>
+                <h2 class="section-heading">Construction Packages</h2>
+            </div>
+
+            <div class="pricing-container">
+                <div class="package-tabs">
+                    <button class="tab-btn active" onclick="openPackage(event, 'standard')">Standard</button>
+                    <button class="tab-btn" onclick="openPackage(event, 'premium')">Premium</button>
+                    <button class="tab-btn" onclick="openPackage(event, 'ultra')">Ultra Luxury</button>
+                </div>
+
+                <div id="standard" class="package-content active-panel">
+                    <div class="price-header">
+                        <h3>Standard Package</h3>
+                        <div class="price-display">
+                            <span class="currency">₹</span><span class="amount">2099</span><span class="unit">per sqft</span>
+                        </div>
+                    </div>
+                    <ul class="feature-list">
+                        <li class="feature-item">
+                            <div class="feature-header">Design <span class="icon">+</span></div>
+                            <div class="feature-body">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                    <li>Scheme Drawing: All Floors (2D)</li>
+                                    <li>Elevation Design: (3D)</li>
+                                    <li>Half Layout: All Floors (3D)</li>
+                                    <li>Electrical Drawings: All Floors (2D)</li>
+                                    <li>Plumbing Drawing: All Floors (2D)</li>
+                                    <li>Working Drawing: All Floors (2D)</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-header">Project Management <span class="icon">+</span></div>
+                            <div class="feature-body">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                    <li>Site Engineer: Dedicated Full-Time Site Engineer</li>
+                                    <li>Project Manager: Daily Site Visit</li>
+                                    <li>Android/IOS App: Daily Photo Upload. Project Status Monitoring</li>
+                                    <li>Architect: Support Till Design Completion</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-header">Structure <span class="icon">+</span></div>
+                            <div class="feature-body">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                    <li>Basement Height: Upto 3 feet</li>
+                                    <li>Steel: Suryadev TMT / Sumangala TMT or Equivalent</li>
+                                    <li>Chamber Bricks: For Partition walls. 9-Inch Thick Exterior Walls | 4 Inch Thick Inner Walls</li>
+                                    <li>Cement: Ramco / Dalmia</li>
+                                    <li>M Sand: Blockwork & All Masonry Works</li>
+                                    <li>P Sand: Plastering Works</li>
+                                    <li>Concrete Grade: M20 | RMC for Roof</li>
+                                    <li>Ceiling Height: 10 Feet</li>
+                                    <li>Parapet Wall: 3' Feet Height | 6" Thick (Only for Floor with Headroom)</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-header">Bathroom & Plumbing <span class="icon">+</span></div>
+                            <div class="feature-body">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                    <li>Wall Tiles: Upto Ceiling (Full Height). Size 2'X2' Vitrified Tile. Upto ₹50/Sqft. 1 Colour for 2 Bathrooms</li>
+                                    <li>Bath & CP Fittings: Parryware | Upto ₹17000 Per Bathroom</li>
+                                    <li>Plumbing Pipes & Fittings: Inner CPVC, Outer PVC. Brands: Any ISI Brand</li>
+                                    <li>Overhead Tank: 2000 litres Sintex | 3 Layered | UV Protected | White Colour</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-header">Flooring <span class="icon">+</span></div>
+                            <div class="feature-body">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                    <li>Living, Dining, Bedrooms & Kitchen: 4'X2' | Vitrified Tiles Upto ₹65/Sqft. 1 Model</li>
+                                    <li>Balcony & Utility: Size 2'X2' | Upto 50/Sqft | Antiskid</li>
+                                    <li>Staircase: Full Body Tile : Upto ₹110/sqft</li>
+                                    <li>Car Parking: 1'X1' Heavy Duty Tile | Upto ₹50/Sqft</li>
+                                    <li>Terrace Flooring: Screed Concreting with Waterproofing</li>
+                                </ul>
+                            </div>
+                        </li>
+                         <li class="feature-item">
+                            <div class="feature-header">Kitchen & Dining <span class="icon">+</span></div>
+                            <div class="feature-body">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                    <li>Wall Tile: Vitrified Tile (2'x2') | Upto ₹55/Sqft</li>
+                                    <li>Sink Faucet: Upto ₹2000 / No</li>
+                                    <li>Kitchen Sink: Stainless Steel sink with Drain Upto ₹4000</li>
+                                    <li>Dining: Wall Mounted Wash Basin</li>
+                                    <li>Kitchen Granite Top: Upto ₹140/Sqft</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-header">Door, Windows and Railing <span class="icon">+</span></div>
+                            <div class="feature-body">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                    <li>Main Door: Malaysian Teak Door & Teak Frame (35mm Thickness, 5"X3" Frame) | Upto 22000/nos</li>
+                                    <li>Room Doors: Flush Door | Sal Wood Frame | 7'X3'</li>
+                                    <li>Bathroom Door: WPC Door & Frame | 7'X2.5'</li>
+                                    <li>Windows: UPVC Sliding White | Max 5' X 5' | One Window Per Room | 5mm Clear Glass</li>
+                                    <li>Staircase Railing: SS 304 Grade Railing</li>
+                                    <li>Balcony Railing: SS 304 Grade Railing with 8mm Toughened Glass with Posts</li>
+                                </ul>
+                            </div>
+                        </li>
+                         <li class="feature-item">
+                            <div class="feature-header">Painting <span class="icon">+</span></div>
+                            <div class="feature-body">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                    <li>Inner Wall Putty: 2 coats of Wall Putty | Nippon</li>
+                                    <li>Wall Painting: 1 coat of Primer | 2 coats of Breeze emulsion | Nippon</li>
+                                    <li>Ceiling Painting: 1 coat of Primer | 2 coats of Breeze emulsion | Nippon</li>
+                                    <li>Exterior Paint: 1 coat of Primer | 2 Coats of Sumo Xtra | Nippon</li>
+                                    <li>Elevation Putty: 2 Coat of Putty for Front Elevation | Nippon Exterior Putty</li>
+                                </ul>
+                            </div>
+                        </li>
+                         <li class="feature-item">
+                            <div class="feature-header">Electrical <span class="icon">+</span></div>
+                            <div class="feature-body">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                    <li>Wires: Orbit (FRLS)</li>
+                                    <li>Switches: Legrand</li>
+                                    <li>Bedroom: 3 Switch Box(8-Module)</li>
+                                    <li>Bathroom: 1 Switch Box(Inner) 4-Module, 1 Switch Box(Outer) 3-Module</li>
+                                    <li>Living Room: Upto 4 Switch Box (8 Module)</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-header">What's Not Included <span class="icon">+</span></div>
+                            <div class="feature-body">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                    <li>Compound Wall @ 425/Sqft & Gate</li>
+                                    <li>Sump & Septic Tank @ 24/Litre</li>
+                                    <li>Lift, Lift Pit and Shaft</li>
+                                    <li>Electricity Connection</li>
+                                    <li>Building Plan Approval</li>
+                                    <li>Elevation Special Materials</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn-gold-solid" onclick="openQuoteModal(event)">Get Detailed Specification</a>
+                </div>
+
+                <div id="premium" class="package-content">
+                    <div class="price-header">
+                        <h3>Premium Package</h3>
+                        <div class="price-display">
+                            <span class="currency">₹</span><span class="amount">2399</span><span class="unit">per sqft</span>
+                        </div>
+                    </div>
+                    <ul class="feature-list">
+                         <li class="feature-item">
+                            <div class="feature-header">Design <span class="icon">+</span></div>
+                            <div class="feature-body">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                    <li>Includes Standard Items +</li>
+                                    <li>Soil Test Report</li>
+                                    <li>Structural Drawings</li>
+                                    <li>Furniture Layout: All Floors (2D)</li>
+                                    <li>Elevation Detail Drawing: (2D)</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-header">Project Management <span class="icon">+</span></div>
+                            <div class="feature-body">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                    <li>Site Engineer: Dedicated Full-Time Site Engineer</li>
+                                    <li>Project Manager: Daily Site Visit</li>
+                                    <li>Android/IOS App: Daily Photo Upload. Project Status Monitoring</li>
+                                    <li>Architect: Dedicated Architect through-out the Project. Stage wise Site Visit. Material Selection Support</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-header">Structure <span class="icon">+</span></div>
+                            <div class="feature-body">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                    <li>Basement Height: Upto 3.5 feet</li>
+                                    <li>Steel: Vizag / ARS or Equivalent</li>
+                                    <li>Wire-Cut Bricks: For Partition walls. 9-Inch Thick Exterior Walls | 4 Inch Thick Inner Walls</li>
+                                    <li>Cement: Ramco / Dalmia</li>
+                                    <li>Ceiling Height: 10 Feet (FFL to FFL)</li>
+                                    <li>Steel Reinforcement: As per DEEJOS Structural Detailing</li>
+                                    <li>Parapet Wall: 3.5' Feet Height | 6" Thick</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-header">Bathroom & Plumbing <span class="icon">+</span></div>
+                            <div class="feature-body">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                    <li>Wall Tiles: Upto Ceiling (Full Height). 4'X2' Digital Vitrified Tile. Upto ₹85/Sqft</li>
+                                    <li>Bath & CP Fittings: Jaquar | Upto ₹22000 Per Bathroom</li>
+                                    <li>Plumbing Pipes & Fittings: Inner CPVC, Outer PVC. Brands: Ashirwad / Finolex</li>
+                                    <li>Overhead Tank: 3000 litres Sintex | 5 Layered | UV Protected | White Colour. With Sensor</li>
+                                    <li>Solar Heater Plumbing Lines: Included (If Required)</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-header">Flooring <span class="icon">+</span></div>
+                            <div class="feature-body">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                    <li>Living, Dining, Bedrooms & Kitchen: 4'X2' | Tiles Upto ₹80/Sqft. Somany / Kajaria / KAG / Sunheart</li>
+                                    <li>Balcony & Utility: Size 2'X2' | Upto 60/Sqft</li>
+                                    <li>Staircase: Granite Upto ₹160/sqft</li>
+                                    <li>Car Parking: 2'X2' Heavy Stone| Upto ₹80/Sqft</li>
+                                    <li>Terrace Flooring: White Cooling Tile Size 1'X1' | Anuj | with Waterproofing</li>
+                                </ul>
+                            </div>
+                        </li>
+                         <li class="feature-item">
+                            <div class="feature-header">Kitchen & Dining <span class="icon">+</span></div>
+                            <div class="feature-body">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                    <li>Wall Tile: Vitrified Tile (4'x2') | Upto ₹65/Sqft</li>
+                                    <li>Sink Faucet: Designer Brand | Upto ₹3500 /nos</li>
+                                    <li>Kitchen Sink: Quartz Sink with Drain Upto ₹5000</li>
+                                    <li>Dining: Wash Basin with Granite Counter</li>
+                                    <li>Kitchen Granite Top: Upto ₹160/Sqft</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-header">Door, Windows and Railing <span class="icon">+</span></div>
+                            <div class="feature-body">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                    <li>Main Door: Ghana Teak Door & Teak Frame | 8' Height 4 Feet Width</li>
+                                    <li>Room Doors: Flush Door with Laminate | Ghana Wood Frame | 7'X3'</li>
+                                    <li>Windows: UPVC Sliding White - No Restriction on Size and Quantity | 5mm Clear Glass</li>
+                                    <li>Balcony Railing: 10mm Full Toughened Glass with 304 Grade Railing</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-header">Painting <span class="icon">+</span></div>
+                            <div class="feature-body">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                    <li>Inner Wall Putty: 2 coats of Wall Putty | Birla</li>
+                                    <li>Wall Painting: 1 coat of Primer | 2 coats of Pro Matex Gold Emulsion | Nippon</li>
+                                    <li>Exterior Paint: 1 coat of Primer | 2 Coats of Weather bond PRO from Nippon</li>
+                                    <li>Elevation Putty: 2 Coat of Putty for Two sides of Elevation | Birla Wallseal Waterproof</li>
+                                </ul>
+                            </div>
+                        </li>
+                         <li class="feature-item">
+                            <div class="feature-header">Electrical <span class="icon">+</span></div>
+                            <div class="feature-body">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                    <li>Wires: Finolex / Havells (FRLS)</li>
+                                    <li>Switches: GM</li>
+                                    <li>Bedroom: 4 Switch Box(8-Module)</li>
+                                    <li>Living Room: Upto 5 Switch Box (8 Module)</li>
+                                    <li>Electricity Panel Board: Single Service with RLCB - Exterior Grade</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-header">What's Not Included <span class="icon">+</span></div>
+                            <div class="feature-body">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                    <li>Compound Wall @ 425/Sqft & Gate</li>
+                                    <li>Sump & Septic Tank @ 24/Litre</li>
+                                    <li>Lift</li>
+                                    <li>Electricity Connection</li>
+                                    <li>Building Plan Approval</li>
+                                    <li>Elevation Special Materials</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn-gold-solid" onclick="openQuoteModal(event)">Get Detailed Specification</a>
+                </div>
+
+                <div id="ultra" class="package-content">
+                    <div class="price-header">
+                        <h3>Ultra Luxury</h3>
+                        <div class="price-display">
+                            <span class="currency">₹</span><span class="amount">2999</span><span class="unit">per sqft</span>
+                        </div>
+                    </div>
+                    <ul class="feature-list">
+                         <li class="feature-item">
+                            <div class="feature-header">Design <span class="icon">+</span></div>
+                            <div class="feature-body">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                    <li>Includes Premium Items +</li>
+                                    <li>Site Assessment & Site Plan</li>
+                                    <li>Interior Views: All Floors (3D)</li>
+                                    <li>Interior Detailing: All Rooms (2D)</li>
+                                    <li>Interior 3D Walk-Through</li>
+                                    <li>Landscaping Architectural Designs</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-header">Project Management <span class="icon">+</span></div>
+                            <div class="feature-body">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                    <li>Site Engineer: Dedicated Full-Time Site Engineer</li>
+                                    <li>Project Manager: Daily Site Visit</li>
+                                    <li>Architect: Dedicated Architect. Frequent Site Visit. Material & Brand Selection Support including Interiors and Home Decor</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-header">Structure <span class="icon">+</span></div>
+                            <div class="feature-body">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                    <li>Basement Height: Upto 5 feet</li>
+                                    <li>Steel: TATA Steel</li>
+                                    <li>Cement: Ramco / Dalmia / Coromandel</li>
+                                    <li>River Sand: Blockwork & Plastering</li>
+                                    <li>Concrete Grade: M25 | RMC for Roof</li>
+                                    <li>Ceiling Height: 11 Feet (FFL to FFL)</li>
+                                    <li>Steel Reinforcement: 1.5times Strength all as per DEEJOS Structural Drawings</li>
+                                    <li>Parapet Wall: 3.5' Feet Height | 6" Thick (Or) Toughened Glass Railing if Required</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-header">Bathroom & Plumbing <span class="icon">+</span></div>
+                            <div class="feature-body">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                    <li>Wall Tiles: Upto Ceiling (Full Height). 4'X2' Vitrified Tile. Upto ₹120/Sqft</li>
+                                    <li>Bath & CP Fittings: Kohler | Upto ₹60000 Per Bathroom</li>
+                                    <li>Concealed EWC, Counter Top Wash Basin</li>
+                                    <li>Plumbing Pipes: Inner CPVC, Outer PVC. HDPE flexible pipe. Brands: Ashirwad / Finolex / Jindal</li>
+                                    <li>RCC Overhead Tank: Upto 6000 litres with Waterproofing</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-header">Flooring <span class="icon">+</span></div>
+                            <div class="feature-body">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                    <li>Living, Dining, Bedrooms & Kitchen: 6'X6' | Quarts Tiles Upto ₹200/Sqft</li>
+                                    <li>Staircase: Marble Upto ₹350/sqft</li>
+                                    <li>Car Parking: Granite| Upto ₹120/Sqft</li>
+                                    <li>Terrace Flooring: 2'X2' Exterior Grade Vitrified Tile. (Any Grade) | with Waterproofing</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-header">Kitchen & Dining <span class="icon">+</span></div>
+                            <div class="feature-body">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                    <li>Wall Tile: Vitrified Designer Tile (4'x2') | Upto ₹125/Sqft</li>
+                                    <li>Sink Faucet: Floor Mounter Pull-Out | Upto ₹8000 / No</li>
+                                    <li>Kitchen Sink: Multifunction Sink Upto ₹15000</li>
+                                    <li>Dining: Premium Designer Collection Wash Basin with Marble Counter and Designer Tap</li>
+                                    <li>Kitchen Top: Quarts Stone Upto ₹350/Sqft</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-header">Door, Windows and Railing <span class="icon">+</span></div>
+                            <div class="feature-body">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                    <li>Main Door: Designer Wood Door (8x5) (or) Security Steel Door (8'x4.5') Pure Stainless Steel with Digital Lock</li>
+                                    <li>Room Doors: Flush Door with Laminate | Ghana Wood Frame | 8'X3.5'</li>
+                                    <li>Windows: Openable Type | UPVC Coloured | No Restriction on Size and Quantity | Toughened Glass</li>
+                                    <li>Staircase Railing: Toughened Glass with SS or Wood Railing or Aluminium</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-header">Painting <span class="icon">+</span></div>
+                            <div class="feature-body">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                    <li>Inner Wall Putty: 2 coats of Wall Putty | Birla</li>
+                                    <li>Wall Painting: 1 coat of Primer | 2 coats of Royal Shyne | Asian</li>
+                                    <li>Exterior Paint: 1 coat of Primer | 2 Coats of Apex Ultima ProteK | Asian</li>
+                                    <li>Elevation Putty: 2 Coat of Putty for All sides of Elevation | Birla Wallseal Waterproofing</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-header">Electrical <span class="icon">+</span></div>
+                            <div class="feature-body">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                    <li>Wires: Finolex / Havells (FRLS)</li>
+                                    <li>Switches: Touch Switches with Glass Plates</li>
+                                    <li>No Restriction on Number of Points</li>
+                                    <li>Electricity Panel Board: Upto 2 Service Connection with RLCB Exterior Grade</li>
+                                </ul>
+                            </div>
+                        </li>
+                         <li class="feature-item">
+                            <div class="feature-header">What's Not Included <span class="icon">+</span></div>
+                            <div class="feature-body">
+                                <ul style="list-style-type: disc; padding-left: 20px;">
+                                    <li>Compound Wall @ 425/Sqft & Gate</li>
+                                    <li>Sump & Septic Tank @ 24/Litre</li>
+                                    <li>Lift</li>
+                                    <li>Electricity Connection</li>
+                                    <li>Building Plan Approval</li>
+                                    <li>Elevation Special Materials</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn-gold-solid" onclick="openQuoteModal(event)">Get Detailed Specification</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <h2 class="section-heading text-center" style="margin-bottom: 80px;">Our Projects</h2>
+            
+            <div class="project-row">
+                <div class="project-img">
+                    <img src="assets/images/projects/project.jpg" alt="Classic 2-Story Home">
+                </div>
+                <div class="project-info">
+                    <h3>Classic 2-Story House</h3>
+                    <div class="line-separator"></div>
+                    <p>A distinctive G+1 reinforced concrete residence designed for longevity. This two-story home features a column-free living hall, earthquake-resistant structural framing, and a contemporary facade that blends style with durability.</p>
+                    <a href="#" class="read-more">View Details &rarr;</a>
+                </div>
+            </div>
+
+            <div class="project-row reverse">
+                <div class="project-img">
+                    <img src="assets/images/projects/project2.jpg" alt="Emerald Duplex">
+                </div>
+                <div class="project-info">
+                    <h3>Modern Duplex Villa</h3>
+                    <div class="line-separator"></div>
+                    <p>An elegant double-story villa built on a robust RC framework. Highlights include a grand double-height foyer, spacious upper-floor balconies, and premium weather-proof exterior finishes designed for the tropical climate.</p>
+                    <a href="#" class="read-more">View Details &rarr;</a>
+                </div>
+            </div>
+
+            <div class="project-row">
+                <div class="project-img">
+                    <img src="assets/images/projects/project3.jpg" alt="Sapphire Haven">
+                </div>
+                <div class="project-info">
+                    <h3>Independent Garden House</h3>
+                    <div class="line-separator"></div>
+                    <p>A independent house featuring custom architectural planning. Designed for barrier-free living, it hosts an expansive open-plan dining area and private suites with attached garden</p>
+                    <a href="#" class="read-more">View Details &rarr;</a>
+                </div>
+            </div>
+
+            <div class="project-row reverse">
+                <div class="project-img">
+                    <img src="assets/images/projects/project4.jpg" alt="Skyline Residence">
+                </div>
+                <div class="project-info">
+                    <h3>Contemporary Residence</h3>
+                    <div class="line-separator"></div>
+                    <p>A modern RC-framed home maximizing vertical space. This two-story design integrates thermal insulation, smart lighting, and a structural layout optimized for future vertical expansion.</p>
+                    <a href="#" class="read-more">View Details &rarr;</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer class="main-footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                
+          <div class="footer-col">
+                    <h4 class="footer-heading">About Company</h4>
+                    <h2 class="footer-brand">VELU BUILDERS</h2>
+                    
+                    <div class="rating-box">
+                        <span class="stars">★★★★★</span>
+                        <p class="rating-text">Rated 5/5 based on 2345 customer ratings</p>
+                    </div>
+
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/" class="social-circle" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/" class="social-circle" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.281.11-.705.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.232-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.047-1.096-.047-3.232 0-2.136.009-2.388.047-3.231.036-.78.166-1.204.275-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/" class="social-circle" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                            </svg>
+                        </a>
+                        <a href="https://in.linkedin.com/" class="social-circle" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#" onclick="openQuoteModal(event)">Contact Us</a></li>
+                    </ul>
+                </div>
+
+               <div class="footer-col">
+                    <h4 class="footer-heading">Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Approval Drawings</a></li>
+                        <li><a href="#services">Building Constructions</a></li>
+                        <li><a href="#services">Architecture Plan & 3D Elevation</a></li>
+                        <li><a href="#services">Turnkey Projects</a></li>
+                        <li><a href="#services">Consultancy Work</a></li>
+                        <li><a href="#services">Real Estate</a></li>
+                        <li><a href="#services">Estimation for Banks</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <ul class="contact-list">
+                        <li class="company-name">Velu Builders</li>
+                        <li>5/285/49-B1, Trini Garden,<br>Thennampalayam, Arasur,<br>Coimbatore - 641407</li>
+                        <li class="gst-text">GST: 33EFYPS9594J1Z2</li>
+                        <li class="phone-numbers">
+                            📞 99449 44575 <br> 
+                            📞 99448 18375
+                        </li>
+                        <li>✉️ Velubuilders7@gmail.com</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; Velu Builders — All Rights Reserved</p>
+        </div>
+    </footer>
+
+
+    <!-- Quote Modal -->
+    <div id="quoteModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            
+            <div class="modal-grid">
+                <div class="modal-form-side">
+                    <div class="form-header">
+                        <h3>Get Free Quote</h3>
+                    </div>
+                    <form class="quote-form">
+                        <label>Name *</label>
+                        <input type="text" placeholder="Enter your Name" required>
+
+                        <label>Mobile Number *</label>
+                        <div class="phone-input-group">
+                            <span class="country-flag">IND▼</span>
+                            <input type="tel" placeholder="Enter mobile number" required>
+                        </div>
+
+                        <label>Email ID *</label>
+                        <input type="email" placeholder="Enter your Email ID" required>
+
+                        <label>City *</label>
+                        <select required>
+                            <option value="" disabled selected>Select City</option>
+                            <option value="coimbatore">Coimbatore</option>
+                        </select>
+
+                        <button type="submit" class="submit-btn">GET FREE QUOTE</button>
+                    </form>
+                </div>
+
+                <div class="modal-brand-side">
+                    <h2 class="brand-logo">VELU BUILDERS</h2>
+                    
+                    <div class="brand-message">
+                        <div class="vertical-line"></div>
+                        <div class="message-text">
+                            <h1>HOME<br>CONSTRUCTION<br><strong>EXPERTS</strong><br>IN<br><span class="gold-text">INDIA</span></h1>
+                        </div>
+                    </div>
+                    
+                    <div class="badge-container">
+                        <div class="badge-circle">
+                            <span>CELEBRATING</span>
+                            <strong>25</strong>
+                            <span>YEARS OF<br>EXCELLENCE</span>
+                        </div>
+                    </div>
+
+                    <p class="brand-footer">TURNKEY CONSTRUCTION<br>SERVICES</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+
+    <a href="https://wa.me/919944944575?text=Hi%20Velu%20Builders,%20I%20am%20interested%20in%20your%20services." class="whatsapp-btn" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="#ffffff">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+    </a>
+
+   
+    <script>
+        // Initial display
+// ... existing code ...
+
+// --- Quote Modal Logic ---
+const modal = document.getElementById('quoteModal');
+const closeBtn = document.querySelector('.close-btn');
+
+// Function to Open Modal
+function openQuoteModal(event) {
+    if(event) event.preventDefault(); // Prevent default anchor jump
+    modal.style.display = 'flex'; // Use flex to center
+}
+
+// Function to Close Modal
+function closeModal() {
+    modal.style.display = 'none';
+}
+
+// Close if clicking outside the modal content
+window.onclick = function(event) {
+    if (event.target == modal) {
+        closeModal();
+    }
+}
+
+// Attach click event to ALL "Get Detailed Specification" buttons
+document.addEventListener('DOMContentLoaded', () => {
+    const quoteButtons = document.querySelectorAll('.btn-gold-solid');
+    quoteButtons.forEach(btn => {
+        btn.addEventListener('click', openQuoteModal);
+    });
+});
+    </script>
+</body>
+</html>
