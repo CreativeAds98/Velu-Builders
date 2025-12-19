@@ -72,7 +72,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; }
     box-shadow: 0 8px 30px rgba(0,0,0,0.1);
 } 
 .nav-flex { display: flex; justify-content: space-between; align-items: center; }
-.logo img { height: 120px; } /* Adjust based on your logo */
+.logo img { height: 90px; } /* Adjust based on your logo */
 
 .nav-links { list-style: none; display: flex; gap: 40px; align-items: center; }
 .nav-links a {
