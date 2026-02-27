@@ -740,27 +740,58 @@
                     <div class="form-header">
                         <h3>Get Free Quote</h3>
                     </div>
-                    <form class="quote-form">
+                        <form 
+                        action="https://api.web3forms.com/submit" 
+                        method="POST"
+                        class="quote-form"
+                        >
+
+                        <!-- Web3Forms Access Key -->
+                        <input type="hidden" name="access_key" value="82ddfa77-cc30-4b61-8cb5-2e5a3ede8950">
+
+                        <!-- Optional subject -->
+                        <input type="hidden" name="subject" value="New Free Quote Request">
+
+                        <!-- Optional sender name -->
+                        <input type="hidden" name="from_name" value="Website Quote Form">
+
                         <label>Name *</label>
-                        <input type="text" placeholder="Enter your Name" required>
+                        <input 
+                            type="text" 
+                            name="name"
+                            placeholder="Enter your Name" 
+                            required>
 
                         <label>Mobile Number *</label>
                         <div class="phone-input-group">
                             <span class="country-flag">IND▼</span>
-                            <input type="tel" placeholder="Enter mobile number" required>
+                            <input 
+                            type="tel" 
+                            name="mobile"
+                            placeholder="Enter mobile number" 
+                            required>
                         </div>
 
                         <label>Email ID *</label>
-                        <input type="email" placeholder="Enter your Email ID" required>
+                        <input 
+                            type="email" 
+                            name="email"
+                            placeholder="Enter your Email ID" 
+                            required>
 
                         <label>City *</label>
-                        <select required>
+                        <select name="city" required>
                             <option value="" disabled selected>Select City</option>
-                            <option value="coimbatore">Coimbatore</option>
+                            <option value="Coimbatore">Coimbatore</option>
                         </select>
 
-                        <button type="submit" class="submit-btn">GET FREE QUOTE</button>
-                    </form>
+                        <button 
+                            type="submit" 
+                            class="submit-btn">
+                            GET FREE QUOTE
+                        </button>
+
+                        </form>
                 </div>
 
                 <div class="modal-brand-side">
